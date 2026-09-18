@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.coverage
+.pytest_cache/
+package-scratch/
+sample-vault/
+test-output/
+*.tmp

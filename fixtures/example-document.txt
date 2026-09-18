@@ -1,0 +1,3 @@
+Fictional fixture only.
+
+The sample project has no real people, accounts, commitments, or external references.

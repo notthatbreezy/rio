@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "primary_purpose": "Keep one fictional research project organized.",
+  "useful_first_result": "A concise evidence-linked summary of one supplied sample document.",
+  "review_preference": "Review Markdown files directly.",
+  "workspace": {
+    "destination": "sample-vault",
+    "authorize_create_if_missing": true,
+    "authorize_local_setup": true
+  },
+  "sources": [
+    {
+      "source_and_purpose": "A fictional user-supplied document for a bounded pilot.",
+      "account_or_location": "fixtures/example-document.txt",
+      "in_scope": "Only the explicitly supplied fictional document.",
+      "out_of_scope": "All accounts, connectors, unrelated files, and external systems.",
+      "access_method": "supplied_file",
+      "allowed_operations": ["read supplied file", "retain a local evidence copy"],
+      "capability_status": "planned",
+      "limits_and_retention": "One fictional document; local retention permitted for the later pilot."
+    }
+  ],
+  "exclusions": ["credentials", "personal data", "customer data", "external mutations"],
+  "external_actions": "unauthorized",
+  "recovery": {
+    "decision": "deferred"
+  },
+  "confirmed": false,
+  "confirmed_on": "2026-01-01"
+}

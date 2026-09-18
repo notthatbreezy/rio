@@ -162,6 +162,10 @@ management. These public resources deserve credit and are useful reading in thei
   provides the broader motivation: turn captured information into useful, actionable
   knowledge rather than collecting it for its own sake. Rio is an independent
   implementation, not an official version of that system.
+- **Analytics at Meta's [How We Built an AI Second Brain for 60K Knowledge Workers](https://medium.com/@AnalyticsAtMeta/how-we-built-an-ai-second-brain-for-60k-knowledge-workers-78c507dd795b)**
+  is additional recommended reading on AI second brains at organizational scale.
+  Rio focuses on a smaller, local-first starting point and is not an implementation
+  of Meta's system.
 - **The [AGENTS.md convention](https://agents.md/)** provides the public convention
   for a predictable assistant instruction entry point. Rio generates a short file
   that points to the user's actual scope, conventions, and checklist.

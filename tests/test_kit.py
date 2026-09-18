@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import html
 import json
 import os
 import subprocess
@@ -213,8 +214,11 @@ class KitIntegrationTests(unittest.TestCase):
         self.assertEqual(self.bootstrap_cli().returncode, 0)
         self.assertFalse(marker.exists())
         scope = (self.root / "_meta" / "scope.md").read_text(encoding="utf-8")
-        self.assertIn(marker.name, scope)
-        self.assertIn("&#92;", scope)
+        location_row = next(
+            line for line in scope.splitlines() if line.startswith("| Account/location |")
+        )
+        encoded_location = location_row.split("|")[2].strip()
+        self.assertEqual(json.loads(html.unescape(encoded_location)), str(marker))
 
     def test_validator_detects_malformed_output(self) -> None:
         self.assertEqual(self.bootstrap_cli().returncode, 0)
